@@ -1,0 +1,96 @@
+@import "colors.less";
+
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+
+html {
+	background-color: @color_body;
+	color: @color_body_font;
+}
+
+body {
+	background-color: @color_body;
+	color: @color_body_font;
+}
+
+.jumbotron {
+	background-color: lighten(@color_body, 10%);
+}
+
+#intro {
+	background-image: url('/img/binding_dark.png');
+	background-attachment: fixed;
+	h1 {
+		font-size: 7em;
+		@media (max-width: @screen-md-min) {
+			font-size: 5em;
+		}
+		@media (max-width: @screen-sm-min) {
+			font-size: 3em;
+		}
+	}
+}
+
+#videos {
+	img {
+		max-width: 240px;
+	}
+	.wrap {
+		max-width: 240px;
+	}
+	@media (max-width: @screen-sm-min) {
+		.wrap {
+			max-width: 350px;
+		}
+		img {
+			max-width: 350px;
+		}
+	}
+	.thumbnail {
+		background-color: #000; //inherit;
+		border: none;
+
+		.wrap {
+			display: block;
+			margin: auto;
+		}
+		position: relative;
+		.number {
+			top: 0;
+			right: 0; //1.5em;
+			position: absolute;
+			color: darken(#fff, 50%);
+			background-color: rgba(5, 5, 5, 0.5);
+			h3 {
+				color: #fff;
+				color: darken(#fff, 70%);
+				background-color: #000;
+				background-color: rgba(0, 0, 0, 0.6);
+				padding: 0.2em;
+				margin: 0;
+			}
+		}
+		.caption {
+			bottom: 0;
+			position: absolute;
+			h3 {
+				color: #fff;
+				background-color: #000;
+				background-color: rgba(0, 0, 0, 0.6);
+				padding: 0.2em;
+				margin: 0;
+			}
+		}
+	}
+}
+.row {
+	div {
+		text-align: center;
+		img {
+			margin: auto;
+			text-align: center;
+		}
+	}
+}
+
+
