@@ -11,15 +11,16 @@ html {
 body {
 	background-color: @color_body;
 	color: @color_body_font;
+	background-image: url('/img/binding_dark.png');
+	background-attachment: fixed;
 }
 
 .jumbotron {
-	background-color: lighten(@color_body, 10%);
+	background-color: transparent; //lighten(@color_body, 10%);
+	padding-bottom: 0;
 }
 
 #intro {
-	background-image: url('/img/binding_dark.png');
-	background-attachment: fixed;
 	h1 {
 		font-size: 7em;
 		@media (max-width: @screen-md-min) {
@@ -32,6 +33,13 @@ body {
 }
 
 #videos {
+	h2 {
+		text-align: center;
+		padding: 1em;
+		margin: 0;
+	}
+	background-color: rgba(0, 0, 0, 0.5);
+
 	img {
 		max-width: 240px;
 	}
@@ -83,7 +91,17 @@ body {
 		}
 	}
 }
-.row {
+
+#info {
+	background-color: rgba(0, 0, 0, 0.7);
+	h2 {
+		text-align: center;
+		padding: 1em;
+		margin: 0;
+	}
+}
+
+/*.row {
 	div {
 		text-align: center;
 		img {
@@ -91,6 +109,6 @@ body {
 			text-align: center;
 		}
 	}
-}
+}*/
 
 
